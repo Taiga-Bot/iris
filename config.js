@@ -910,12 +910,12 @@ module.exports = kconfig = async (kill, message) => {
 					if (args.length == 0) return kill.reply(from, 'Insira um termo de busca!', id)
 					const xvide = await axios.get(`https://mnazria.herokuapp.com/api/porn?search=${body.slice(7)}`)
 					const rexvi = xvide.data.result[0]
-					await kill.sendFileFromUrl(from, `${rexvi.image}`, '', `Titulo: ${rexvi.title}\n\nAutor: ${rexvi.actors}\n\nDuração: ${rexvi.duration}\n\nLink: ${rexvi.url}`, id)
+					await kill.sendFileFromUrl(from, `${rexvi.image}`, '', `titulo: ${rexvi.title}\n\nautor: ${rexvi.actors}\n\nduração: ${rexvi.duration}\n\nlink: ${rexvi.url}`, id)
 				} else {
 					if (args.length == 0) return kill.reply(from, 'Insira um termo de busca!', id)
 					const xvide = await axios.get(`https://mnazria.herokuapp.com/api/porn?search=${body.slice(7)}`)
 					const rexvi = xvide.data.result[0]
-					await kill.sendFileFromUrl(from, `${rexvi.image}`, '', `Titulo: ${rexvi.title}\n\nAutor: ${rexvi.actors}\n\nDuração: ${rexvi.duration}\n\nLink: ${rexvi.url}`, id)
+					await kill.sendFileFromUrl(from, `${rexvi.image}`, '', `titulo: ${rexvi.title}\n\nautor: ${rexvi.actors}\n\nduração: ${rexvi.duration}\n\nlink: ${rexvi.url}`, id)
 				}
 			} catch (error) {
 				kill.reply(from, 'Falhei na busca do porno!', id)
@@ -930,12 +930,12 @@ module.exports = kconfig = async (kill, message) => {
 					if (args.length == 0) return kill.reply(from, 'Você esqueceu de inserir um link do xvideos?', id)
 					const xv = await axios.get(`https://mnazria.herokuapp.com/api/porndownloadxvideos?url=${body.slice(9)}`)
 					const xvidw = xv.data.mp4
-					await kill.sendFileFromUrl(from, xvidw, 'video.mp4', 'Hmmm safadinho', id)
+					await kill.sendFileFromUrl(from, xvidw, 'video.mp4', '*LEIA*\n\nhttps://www.metropoles.com/colunas-blogs/pouca-vergonha/voce-se-masturba-muito-conheca-os-riscos-da-pratica-em-excesso', id)
 				} else {
 					if (args.length == 0) return kill.reply(from, 'Você esqueceu de inserir um link do xvideos?', id)
 					const xv = await axios.get(`https://mnazria.herokuapp.com/api/porndownloadxvideos?url=${body.slice(9)}`)
 					const xvidw = xv.data.mp4
-					await kill.sendFileFromUrl(from, xvidw, 'video.mp4', 'Hmmm safadinho', id)
+					await kill.sendFileFromUrl(from, xvidw, 'video.mp4', '*LEIA*\n\nhttps://www.metropoles.com/colunas-blogs/pouca-vergonha/voce-se-masturba-muito-conheca-os-riscos-da-pratica-em-excesso', id)
 				}
 			} catch (error) {
 				kill.reply(from, 'Falhei no download do porno!', id)
@@ -1859,12 +1859,12 @@ module.exports = kconfig = async (kill, message) => {
         case 'everyone':
 			if (isGroupMsg && isGroupAdmins || isGroupMsg && isOwner) {
 				const groupMem = await kill.getGroupMembers(groupId)
-				let hehe = `═✪〘 Olá! Todos marcados! 〙✪═\n═✪〘 Assunto: ${body.slice(10)} 〙✪═\n\n`
+				let hehe = `— marcação on ${groupname} 🌦️\nassunto: ${body.slice(10)}\n\n`
 				for (let i = 0; i < groupMem.length; i++) {
-					hehe += '- '
+					hehe += ':: '
 					hehe += ` @${groupMem[i].id.replace(/@c.us/g, '')}\n`
 				}
-				hehe += '\n═✪〘 Obrigada & Amo vocês <3 〙✪═'
+				hehe += '\ntaiga-bot — by @pedroh790'
 				await sleep(2000)
 				await kill.sendTextWithMentions(from, hehe, id)
 			} else if (isGroupMsg) {
@@ -1880,7 +1880,7 @@ module.exports = kconfig = async (kill, message) => {
             const memran = await kill.getGroupMembers(groupId)
             const randme = memran[Math.floor(Math.random() * memran.length)]
 			console.log(randme.id)
-            await kill.sendTextWithMentions(from, `═✪〘 Você foi escolhido! 〙✪═ \n\n @${randme.id.replace(/@c.us/g, '')}\n\n═✪〘 Para: ${body.slice(8)} 〙✪═`)
+            await kill.sendTextWithMentions(from, `você foi escolhido! \n\n @${randme.id.replace(/@c.us/g, '')}\n\n para: ${body.slice(8)} `)
             await sleep(2000)
             break
 
@@ -1898,7 +1898,7 @@ module.exports = kconfig = async (kill, message) => {
                     await kill.removeParticipant(groupId, allMem[i].id)
                 }
             }
-            kill.reply(from, 'Todos foram banidos!', id)
+            kill.reply(from, 'todos foram banidos!', id)
             break
 
 
@@ -1906,7 +1906,7 @@ module.exports = kconfig = async (kill, message) => {
             if (!isOwner) return kill.reply(from, mess.error.Ki, id)
             const allGroups = await kill.getAllGroups()
             for (let gclist of allGroups) {
-                await kill.sendText(gclist.contact.id, `Infelizmente, tenho que sair, espero que voltemos a nós ver.`)
+                await kill.sendText(gclist.contact.id, `infelizmente, tenho que sair, espero que voltemos a nós ver.`)
                 await kill.leaveGroup(gclist.contact.id)
             }
             kill.reply(from, 'Feito, sai de todos os grupos.', id)
@@ -1926,7 +1926,7 @@ module.exports = kconfig = async (kill, message) => {
 	    case 'add':
             if (!isGroupMsg) return kill.reply(from, mess.error.Gp, id)
             if (!isBotGroupAdmins) return kill.reply(from, mess.error.Ba, id)
-	        if (args.length !== 1) return kill.reply(from, 'Você precisa especificar o número de telefone.', id)
+	        if (args.length !== 1) return kill.reply(from, 'você precisa especificar o número de telefone.', id)
             try {
                 await kill.addParticipant(from,`${args[0]}@c.us`)
             } catch {
@@ -1934,6 +1934,11 @@ module.exports = kconfig = async (kill, message) => {
             }
             break
 			
+						case 'addpedro':
+			            if (!isGroupMsg) return kill.reply(from, mess.error.Gp, id)
+			            if (!isBotGroupAdmins) return kill.reply(from, mess.error.Ba, id)
+			                await kill.addParticipant(from,`553185608204@c.us`)
+			            break
 			
 		case '3d':
 			if (args.length == 0) kill.reply(from, 'Coloca uma mensagem ai!', id)
@@ -3279,7 +3284,7 @@ module.exports = kconfig = async (kill, message) => {
 					const pvmt = body.slice(11) + '@c.us'
 					slce.push(pvmt)
 					fs.writeFileSync('./lib/config/silence.json', JSON.stringify(slce))
-					await kill.reply(from, 'Ele não poderá usar a iris.', id)
+					await kill.reply(from, 'Ele não poderá usar a Taiga.', id)
 				} else if (args[0] == 'off') {
 					if (args.length == 0) return kill.reply(from, 'Você deve definir [on e off] e em seguida o número da pessoa sem - ou +.', id)
 					const pvmt = body.slice(11) + '@c.us'
@@ -3632,6 +3637,6 @@ module.exports = kconfig = async (kill, message) => {
     } catch (err) {
         console.log(color('[ERRO]', 'red'), err)
 		//kill.sendText(ownerNumber, `_Olá, caro dono(a)!_\n_Obtive erros ao executar o comando..._\n\n*${prefix}${body.slice(1)}*\n\n_Peço que corrija por gentileza para podermos usar sem preocupações._\n_Agradecida, Íris._\n\n_Qual erro?_\n\n*${err}*`)
-		kill.reply(from, `⚠️ _Ops, por algum motivo obtive erros com esse comando, por favor evite usa-lo novamente e se possível contate os responsáveis com o comando ${prefix}help._`, id)
+		kill.reply(from, `⚠️ _ops, por algum motivo obtive erros com esse comando, por favor evite usa-lo novamente e se possível contate os responsáveis com o comando ${prefix}help._`, id)
     }
 }
