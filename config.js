@@ -1,6 +1,5 @@
 /*
-* Construído por Lucas R. - KillovSky para Legião Z
-* Reprodução autorizada MAS sem remover os créditos do criador deste BOT!
+* Construído por Pedro - Taiga-BOT
 */
 
 // MODULOS
