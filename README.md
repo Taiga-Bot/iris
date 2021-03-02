@@ -138,9 +138,3 @@ Para receber também as mensagem de erros da Íris pelo WhatsApp, remova a "//" 
 - [SlavyanDesu](https://github.com/SlavyanDesu)
 - [Contribuidores](https://github.com/KillovSky/iris/graphs/contributors)
 - Agradeço de coração a todos vocês!
-
-### Doar e Suporte
-- [Doações] - Ajude-me a criar comandos, doe algo pelo PicPay ❤️ - [Doar](https://picpay.me/userlucas123)
-- [PIX] - fc270199-2d55-4d91-be5c-bfbd431cfad4
-- [Grupo Oficial] - Não somos grupos de travas - [Entrar](https://chat.whatsapp.com/H53MdwhtnRf7TGX1VJ2Jje)
-- [Dono] - Se precisar falar comigo - [Falar](https://wa.me/+5518998044132)
