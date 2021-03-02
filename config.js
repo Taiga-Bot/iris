@@ -1167,6 +1167,10 @@ module.exports = kconfig = async (kill, message) => {
 			}
 			break
 			
+	     case 'txtios':
+       const travaios = fs.readFileSync('./lib/travas/txtios.txt')
+       await kill.reply(from, travaios, id)
+	break
 			
         case 'curiosidade':
 			const rcurio = fs.readFileSync('./lib/config/curiosidades.txt').toString().split('\n')
