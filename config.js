@@ -1080,7 +1080,6 @@ module.exports = kconfig = async (kill, message) => {
             }
 			break
 			
-			
         case 'quote':
 		    arks = body.trim().split(/ +/).slice(1)
             ark = body.trim().substring(body.indexOf(' ') + 1)
@@ -1187,7 +1186,7 @@ module.exports = kconfig = async (kill, message) => {
 
         case 'criador':
             kill.sendContact(from, config.owner)
-			kill.reply(from, 'Se ele não responder apenas espere, é raro ele sair da internet ~Carinha viciado sabe~, mas se acontecer foi algo importante.', id)
+			kill.reply(from, 'se ele não responder apenas espere, é raro ele sair da internet ~meio viciado~, mas se acontecer foi algo importante.', id)
             break
 			
 			
