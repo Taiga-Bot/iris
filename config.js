@@ -374,7 +374,7 @@ module.exports = kconfig = async (kill, message) => {
             break
 			
 			
-		case 'about':
+		case 'destrava':
 			await kill.sendFile(from, './lib/media/img/iris.png', 'iris.png', sobre, id)
 			break
 
@@ -1204,7 +1204,7 @@ module.exports = kconfig = async (kill, message) => {
 			break
 			
 
-        case 'iris':
+        case 'taiga':
 			try {
 				const iris = await axios.get(`http://simsumi.herokuapp.com/api?text=${body.slice(6)}&lang=pt`)
 				if (iris.data.success == '') {
@@ -3278,7 +3278,7 @@ module.exports = kconfig = async (kill, message) => {
 					let pvtnm = slce.indexOf(pvmt)
 					slce.splice(pvtnm, 1)
 					fs.writeFileSync('./lib/config/silence.json', JSON.stringify(slce))
-					await kill.reply(from, 'Ele poderá usar a iris novamente.', id)
+					await kill.reply(from, 'Ele poderá usar a Taiga novamente.', id)
 				} else {
 					await kill.reply(from, 'Você deve definir [on e off] e em seguida o número da pessoa sem - ou +.', id)
 				}
