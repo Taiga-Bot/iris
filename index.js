@@ -13,12 +13,12 @@ const fks = JSON.parse(fs.readFileSync('./lib/config/fake.json'))
 
 // Cria um cliente de inicialização da BOT
 const start = (kill = new Client()) => {
-    console.log(color('\n[DEV]', 'red'), color('- Lucas R. - KillovSky <-> +55 18 99804-4132 <-> https://chat.whatsapp.com/H53MdwhtnRf7TGX1VJ2Jje'))
-	console.log(color('[ÍRIS]', 'red'), color('Minha inicialização foi concluída, você pode usar agora...\n'))
+    console.log(color('\n[DEV]', 'red'), color('- Pedro Reis - @pedroh790 <-> +55 31 8560-8204'))
+	console.log(color('[TAIGA]', 'red'), color('Minha inicialização foi concluída, você pode usar agora...\n'))
 	
 		// Forçar recarregamento caso obtenha erros
 		kill.onStateChanged((state) => {
-			console.log('[Estado da Íris]', state)
+			console.log('[Estado da Taiga]', state)
 			if (state === 'UNPAIRED' || state === 'CONFLICT' || state === 'UNLAUNCHED') kill.forceRefocus()
 		})
 		
