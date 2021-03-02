@@ -982,33 +982,18 @@ module.exports = kconfig = async (kill, message) => {
 			
 			
         case 'play':
-            if (args.length == 0) return kill.reply(from, 'Você usou incorretamente.', id)
-            axios.get(`https://docs-jojo.herokuapp.com/api/yt-search?q=${body.slice(6)}`)
-            .then(async (res) => {
-				const pyre = res.data.result.result[0].publishedTime
-				if (pyre == '' || pyre == 'null' || pyre == null || pyre == undefined || pyre == 'undefined') {
-					var playre = 'Indefinido'
-				} else if (pyre.endsWith('years ago')) {
-                    var playre = pyre.replace('years ago', 'Anos atrás')
-				} else if (pyre.endsWith('hours ago')) {
-                    var playre = pyre.replace('hours ago', 'Horas atrás')
-				} else if (pyre.endsWith('minutes ago')) {
-                    var playre = pyre.replace('minutes ago', 'Minutos atrás')
-				} else if (pyre.endsWith('day ago')) {
-                    var playre = pyre.replace('day ago', 'Dia atrás')
-				} else if (pyre.endsWith('months ago')) {
-                    var playre = pyre.replace('months ago', 'Meses atrás')
-				} else if (pyre.endsWith('seconds ago')) {
-                    var playre = pyre.replace('seconds ago', 'Segundos atrás')
-				}
-				const asize = await axios.get(`http://st4rz.herokuapp.com/api/yta?url=http://youtu.be/${res.data.result.result[0].id}`)
+			if (mute || pvmte) return console.log('Comando ignorado.')
+      if (args.length == 0) return kill.reply(from, `ta errado isso aí viu`, id)
+      axios.get(`https://arugaytdl.herokuapp.com/search?q=${body.slice(6)}`)
+      .then(async (res) => {
+          await kill.sendFileFromUrl(from, `${res.data[0].thumbnail}`, ``, `achei pera aí\n\nTitulo: ${res.data[0].title}\nDuração: ${res.data[0].duration}minutos\nUploaded: ${res.data[0].uploadDate}\nViews: ${res.data[0].viewCount}\n\nEspero que eu tenha acertado e...agora é so esperar, não use novamente até que eu termine esse!`, id)
+				const asize = await axios.get(`http://st4rz.herokuapp.com/api/yta?url=http://youtu.be/${res.data[0].id}`)
 				const afsize = asize.data.filesize.replace(' MB', '')
 				console.log(afsize)
 				if (afsize >= 16.0 || asize.data.filesize.endsWith('GB')) {
 					kill.reply(from, `Desculpe, para evitar banimentos do WhatsApp, o limite de envio de audios é de 16MB, e esse possui ${asize.data.filesize}.`, id)
 				} else {
-					await kill.sendFileFromUrl(from, `${res.data.result.result[0].thumbnails[0].url}`, ``, `Titulo: ${res.data.result.result[0].title}\n\nLink: https://youtu.be/${res.data.result.result[0].id}\n\nDuração: ${res.data.result.result[0].duration} minutos\n\nFoi feito a: ${playre}\n\nVisualizações: ${res.data.result.result[0].viewCount.text}\n\nEspero que eu tenha acertado e...agora é so esperar, não use novamente até que eu termine esse!`, id)
-					axios.get(`http://st4rz.herokuapp.com/api/yta2?url=http://youtu.be/${res.data.result.result[0].id}`)
+					axios.get(`http://st4rz.herokuapp.com/api/yta2?url=http://youtu.be/${res.data[0].id}`)
 					.then(async(rest) => {
 						var m3pa = rest.data.result
 						var m3ti = rest.data.title
