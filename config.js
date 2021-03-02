@@ -3193,6 +3193,26 @@ module.exports = kconfig = async (kill, message) => {
 			await kill.reply(from, `O telefone é da ${macre}.`, id)
 			break
 			
+		case 'trava':
+		case 'travar':
+			if (args == 0) return kill.reply(from, `Digite o modo de conversão e em seguida a temperatura, para mais detalhes digite ${prefix}conv -h.`, id)
+			if (args[0] == '-help' || args[0] == '-h') return kill.reply(from, convh, id)
+			try {
+				if (args[0] == '-android') {
+					await kill.reply(from, `nada`, id)
+				} else if (args[0] == '-ios') {
+					await kill.reply(from, `nada`, id)
+				} else if (args[0] == '-alakazam') {
+					await kill.reply(from, `nada`, id)
+				} else if (args[0] == '-cavaleiro') {
+					await kill.reply(from, `nada`, id)
+				} else {
+					await kill.reply(from, convh, id)
+				}
+			} catch (error) {
+				await kill.reply(from, convh + '\n\nCertifique-se de botar o valor da conversão.', id)
+			}
+			break			
 			
 		case 'converter':
 		case 'conv':
