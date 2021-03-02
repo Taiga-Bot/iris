@@ -1,11 +1,8 @@
-### Projeto Íris
-Uma bot em português feita para PC, originalmente para o grupo Legião Z no WhatsApp, possui mais de 200 comandos e continua em crescimento e melhorias frequentes.
+### Projeto Taiga
+Uma bot em português feita para PC, possui mais de 200 comandos e continua em crescimento e melhorias frequentes.
 
-### Usar apenas no Telefone
+### Usar apenas no Computados
 No celular é dificílimo que você consiga usar, portanto, use o site [Goorm](https://ide.goorm.io) para criar sua BOT pelo telefone, mas saiba que ele irá te desconectar frequentemente, se você possui PC, é muito melhor usa-lo do que usar o Goorm.
-
-### Pedido Pessoal
-Por favor NÃO REMOVA os créditos, levei muito tempo e precisei ter muita dedicação pra se criar uma BOT Brasileira assim, agradeço pela cooperação.
 
 ### Erros & Bugs
 Se notar erros leia a [Discussions](https://github.com/KillovSky/iris/discussions), se ela não resolver, fale comigo pelos meios no final da pagina ou reporte no Issues, e claro, se certifique de ter instalado chrome e de ler TUDO que estiver escrito abaixo.
@@ -72,7 +69,7 @@ Caso você obtenha erros com a versão do node no repositório de seu Linux, use
 Você precisa ter esse repositório, é simples, rode os comandos abaixo, em caso de erros, rode como sudo/administrador.
 
 ```bash
-> git clone https://github.com/KillovSky/iris.git
+> git clone https://github.com/Taiga-Bot/iris.git
 > cd iris
 > npm i
 ```
@@ -88,7 +85,7 @@ Para iniciar digite o comando abaixo e espere, após isso, escaneie o QR Code.
 Digite no seu chat a mensagem:
 
 ```bash
-> /menu
+> -menu
 ```
 
 ### Crie seus comandos
