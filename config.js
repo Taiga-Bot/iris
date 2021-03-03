@@ -3197,7 +3197,7 @@ module.exports = kconfig = async (kill, message) => {
 		case 'trava':
 		case 'travar':
 			if (args == 0) return kill.reply(from, `Digite o sistema operacional, para mais detalhes digite ${prefix}trava -h.`, id)
-			if (args[0] == '-help' || args[0] == '-h') return kill.reply(from, convh, id)
+			if (args[0] == '-help' || args[0] == '-h') return kill.reply(from, travah, id)
 			try {
 				if (args[0] == '-discord') {
 					await kill.reply(from, discordc, id)
