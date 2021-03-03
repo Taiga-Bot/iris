@@ -3196,17 +3196,17 @@ module.exports = kconfig = async (kill, message) => {
 			
 		case 'trava':
 		case 'travar':
-			if (args == 0) return kill.reply(from, `Digite o modo de conversão e em seguida a temperatura, para mais detalhes digite ${prefix}conv -h.`, id)
+			if (args == 0) return kill.reply(from, `Digite o sistema operacional, para mais detalhes digite ${prefix}trava -h.`, id)
 			if (args[0] == '-help' || args[0] == '-h') return kill.reply(from, convh, id)
 			try {
-				if (args[0] == '-android') {
-					await kill.reply(from, `nada`, id)
+				if (args[0] == '-discord') {
+					await kill.reply(from, discordc, id)
 				} else if (args[0] == '-ios') {
-					await kill.reply(from, `nada`, id)
+					await kill.reply(from, iosc, id)
 				} else if (args[0] == '-alakazam') {
-					await kill.reply(from, `nada`, id)
+					await kill.reply(from, alakazamc, id)
 				} else if (args[0] == '-cavaleiro') {
-					await kill.reply(from, `nada`, id)
+					await kill.reply(from, cavalairoc, id)
 				} else {
 					await kill.reply(from, convh, id)
 				}
