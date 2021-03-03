@@ -3118,9 +3118,9 @@ module.exports = kconfig = async (kill, message) => {
 			const uzrlvl = rank.getLevel(usuario, nivel)
 			const uneedxp = 5 * Math.pow(uzrlvl, 2) + 50 * uzrlvl + 100
 			const timed = moment(t * 1000).format('DD/MM/YY HH:mm:ss')
-			const allin = `======================\n_Olá_ *"${pushname}"*!\n_Dia:_ *${timed}*\n_Meu Ping:_ *${processTime(t, moment())}* _segundos_\n_Level:_ *${uzrlvl}*\nXP: *${uzrXp}* / *${uneedxp}*\nPatente: *${patente}*\n======================\n\n`
+			const allin = `======================\n_oiii,_ *"${pushname}"*!\n_dia:_ *${timed}*\n_meu ping:_ *${processTime(t, moment())}* _segundos_\n_level:_ *${uzrlvl}*\nXP: *${uzrXp}* / *${uneedxp}*\npatente: *${patente}*\n======================\n\n`
             kill.reply(from, allin + help, id)
-            kill.reply(from, `De outros comandos temos...\n\n*${prefix}Admins* _é para administradores._\n\n*${prefix}Kill* _é apenas para meu dono._\n\n*${prefix}Adult* _é o menu de comandos adultos._\n\n*${prefix}Down* _é o menu de download de músicas e videos._\n\n_Se quiser ganhar XP, converse e use a BOT._`, id)
+            kill.reply(from, `de outros comandos temos...\n\n*${prefix}admins* _é para administradores._\n\n*${prefix}pedro* _é apenas para meu dono._\n\n*${prefix}adult* _é o menu de comandos adultos._\n\n*${prefix}down* _é o menu de download de músicas e videos._\n\n*${prefix}travas* _é o menu de travas._\n\n*${prefix}book* _é o menu de livros bernoulli do 9º ano._\n\n_se quiser ganhar XP, converse e use a BOT._`, id)
             break
 
 
@@ -3136,7 +3136,7 @@ module.exports = kconfig = async (kill, message) => {
             break
 			
 
-        case 'kill':
+        case 'pedro':
             if (!isOwner) return kill.reply(from, mess.error.Kl, id)
             kill.sendText(from, owner, id)
             break
