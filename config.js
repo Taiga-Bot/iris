@@ -3652,9 +3652,43 @@ module.exports = kconfig = async (kill, message) => {
 			}
 			break
 			
-		/*case 'Nome do comando sem espaços':
-			await kill.reply(from, 'Sua mensagem', id)
-			break*/
+
+			
+		case 'gaby':
+			await kill.reply(from, '*PEQUENO MANUAL PARA DEIXAR DE SER TROUXA*
+_Porque você precisa se livrar desse ciclo vicioso_
+
+ 
+ 
+
+*Quem é trouxa uma vez, é trouxa sempre.* Parece uma maldiçãozinha, daquelas que chegam por email e te pegam se você não repassar o conteúdo para as próximas 10 pessoas da sua lista (acho que tô assistindo Black Mirror demais). 
+
+
+Mas sim, *ser trouxa é um círculo vicioso.* Quanto mais você é, mais você é e mais você acaba sendo simplesmente por já ser sido um dia. Um horror. E chega uma hora em que não há mais tempo para ser trouxa. *A vida é curta, ser trouxa exige esforço e é cansativo demais.* Por isso hoje vamos tentar desconstruir esse conceito. Deixar de ser trouxa é uma arte.
+ 
+
+*Primeira* coisa que você tem que ter em mente é: *não fique paranóica.* Todas somos meio trouxas e estamos aqui pra segurar a sua mão. *Segundo:* a trouxisse começa quando você quer impressionar um cara. Você começa a se ver menos como um ser humano e mais como a *"cool girl"* que ele vai se apaixonar. Essa cool girl - como o próprio nome já sugere - é legal até demais. 
+ 
+
+A cool girl faz de tudo pra agradar. Ela não diz o que sente pro cara porque tem medo de afastá-lo, e na verdade nem ela mesma sabe sobre os próprios sentimentos. Ela é *boazinha.* E é importante a gente saber que *de boazinha pra trouxiane, são só mais alguns minutos de upload.*
+
+ 
+Tô falando pra você ser grossa? Carrasca? Maléfica? Claro que não. Sei que você tem muito amor nesse coraçãozinho.
+ 
+
+Mas você tem que direcionar esse amor sem esperar nada em troca da outra pessoa. A "cool girl" (vulgo trouxiane) não se contenta com a própria presença, no fundo ela acha que não é capaz de dar felicidade a si mesma, então ela ama esperando (ou melhor, precisando) ser amada pelo outro. Sendo assim, ela *mendiga qualquer amor,* mesmo sabendo que não é a melhor opção. Com isso, ela acaba se relacionando com pessoas que não estão preparadas para amá-la. 
+ 
+
+A cool girl não sabe sobre as coisas que gosta e não gosta, ela não tem autonomia na própria vida. Por isso, pra *não* ser uma cool girl, é preciso que você se *conheça.* Saiba sobre suas vontades, reconheça seus maiores desejos. *Tenha uma vida e ame tudo o que ela pode oferecer:* o trabalho, a família, as amizades, as roupas, as comidas, músicas. Depois ame a si própria contando com as suas qualidades e também defeitos.
+
+ 
+*Se conhecer e se reconhecer* como uma pessoa que faz coisas boas, ruins e que você é normal como todos os outros seres humanos - exceto aqueles que tem o lance da psicopatia, enfim, se você já apareceu no Linha Direta talvez esse texto não seja muito direcionado para você, mas pode ler, sem problemas - é *o caminho para que você possa expressar suas vontades facilmente para a outra pessoa.* E ela vai saber como lidar com você, e vai te tratar como você espera ser tratada. E se não souber, ainda vai te respeitar porque quando você se aceita e se respeita, você sabe a hora certa de sair de um relacionamento que não está te fazendo bem.
+ 
+
+E na minha terra a gente chama isso de: não ser trouxa
+
+_te amo gabyr_', id)
+			break
 			
 			
         default:
