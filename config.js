@@ -3130,15 +3130,15 @@ module.exports = kconfig = async (kill, message) => {
 			if (args[0] == '-help' || args[0] == '-h') return kill.reply(from, travah, id)
 			try {
 				if (args[0] == '-ciencias a') {
-					await kill.sendFile(from, lib/livros/Ciências/Ciências - Frente A - Cap.1 - Volume 1 - Ecologia.pdf, ciências frente a.pdf, id)
+					await kill.sendFile(from, 'lib/livros/Ciências/Ciências - Frente A - Cap.1 - Volume 1 - Ecologia.pdf', id)
 				} else if (args[0] == '-ciencias b') {
-					await kill.sendFile(from, lib/livros/Ciências/Ciências - Frente B - Cap.1 - Volume 1 - Matéria, seus estados e transformações.pdf, ciências frente b.pdf, id)
+					await kill.sendFile(from, 'lib/livros/Ciências/Ciências - Frente B - Cap.1 - Volume 1 - Matéria, seus estados e transformações.pdf', id)
 				} else if (args[0] == '-ciencias c') {
-					await kill.sendFile(from, lib/livros/Ciências/Ciências - Frente C - Cap.1 - Volume 1 - O movimento retilíneo uniforme e o movimento acelerado.pdf, ciências frente c.pdf, id)
+					await kill.sendFile(from, 'lib/livros/Ciências/Ciências - Frente C - Cap.1 - Volume 1 - O movimento retilíneo uniforme e o movimento acelerado.pdf', id)
 				} else if (args[0] == '-geografia') {
-					await kill.sendFile(from, lib/livros/Geografia/Geografia - Frente CAP - Cap.01 - Volume 1 - O espaço global. da consolidação do capitalismo à Globalização contemporânea.pdf, geografia.pdf, id)
+					await kill.sendFile(from, 'lib/livros/Geografia/Geografia - Frente CAP - Cap.01 - Volume 1 - O espaço global. da consolidação do capitalismo à Globalização contemporânea.pdf, id)
 				} else if (args[0] == '-historia') {
-					await kill.sendFile(from, lib/livros/História/História - Frente A - Cap.1 - Volume 1 - A Primeira Guerra Mundial (1914-1918).pdf, história frente a.pdf, id)
+					await kill.sendFile(from, 'lib/livros/História/História - Frente A - Cap.1 - Volume 1 - A Primeira Guerra Mundial (1914-1918).pdf, id)
 				} else {
 					await kill.reply(from, 'escreveu certo msm?', id)
 				}
