@@ -378,6 +378,7 @@ module.exports = kconfig = async (kill, message) => {
 		case 'destrava':
 			await kill.sendFile(from, './lib/media/img/iris.png', 'iris.png', sobre, id)
 			break
+			
 
 			
         case 'stickernobg':
@@ -3120,10 +3121,31 @@ module.exports = kconfig = async (kill, message) => {
 			const timed = moment(t * 1000).format('DD/MM/YY HH:mm:ss')
 			const allin = `======================\n_oiii,_ *"${pushname}"*!\n_dia:_ *${timed}*\n_meu ping:_ *${processTime(t, moment())}* _segundos_\n_level:_ *${uzrlvl}*\nXP: *${uzrXp}* / *${uneedxp}*\npatente: *${patente}*\n======================\n\n`
             kill.reply(from, allin + help, id)
-            kill.reply(from, `de outros comandos temos...\n\n*${prefix}admins* _é para administradores._\n\n*${prefix}pedro* _é apenas para meu dono._\n\n*${prefix}adult* _é o menu de comandos adultos._\n\n*${prefix}down* _é o menu de download de músicas e videos._\n\n*${prefix}travas* _é o menu de travas._\n\n*${prefix}book* _é o menu de livros bernoulli do 9º ano._\n\n_se quiser ganhar XP, converse e use a BOT._`, id)
+            kill.reply(from, `de outros comandos temos...\n\n*${prefix}admins* _é para administradores._\n\n*${prefix}pedro* _é apenas para meu dono._\n\n*${prefix}adult* _é o menu de comandos adultos._\n\n*${prefix}down* _é o menu de download de músicas e videos._\n\n*${prefix}travas* _é o menu de travas._\n\n*${prefix}livros* _é o menu de livros bernoulli do 9º ano._\n\n_se quiser ganhar XP, converse e use a BOT._`, id)
             break
 
-
+		case 'livro':
+		case 'livros':
+			if (args == 0) return kill.reply(from, `Digite o sistema operacional, para mais detalhes digite ${prefix}trava -h.`, id)
+			if (args[0] == '-help' || args[0] == '-h') return kill.reply(from, travah, id)
+			try {
+				if (args[0] == '-ciencias a') {
+					await kill.sendFile(from, lib/livros/Ciências/Ciências - Frente A - Cap.1 - Volume 1 - Ecologia.pdf, ciências frente a.pdf, id)
+				} else if (args[0] == '-ciencias b') {
+					await kill.sendFile(from, lib/livros/Ciências/Ciências - Frente B - Cap.1 - Volume 1 - Matéria, seus estados e transformações.pdf, ciências frente b.pdf, id)
+				} else if (args[0] == '-ciencias c') {
+					await kill.sendFile(from, lib/livros/Ciências/Ciências - Frente C - Cap.1 - Volume 1 - O movimento retilíneo uniforme e o movimento acelerado.pdf, ciências frente c.pdf, id)
+				} else if (args[0] == '-geografia') {
+					await kill.sendFile(from, lib/livros/Geografia/Geografia - Frente CAP - Cap.01 - Volume 1 - O espaço global. da consolidação do capitalismo à Globalização contemporânea.pdf, geografia.pdf, id)
+				} else if (args[0] == '-historia') {
+					await kill.sendFile(from, lib/livros/História/História - Frente A - Cap.1 - Volume 1 - A Primeira Guerra Mundial (1914-1918).pdf, história frente a.pdf, id)
+				} else {
+					await kill.reply(from, 'escreveu certo msm?', id)
+				}
+			} catch (error) {
+				await kill.reply(from, convh + '\n\nCertifique-se de botar o valor da conversão.', id)
+			}
+			break	
         case 'admins':
 			if (!isGroupMsg) return kill.reply(from, mess.error.Gp, id)
             if (!isGroupAdmins) return kill.reply(from, mess.error.Ga, id)
@@ -3211,7 +3233,7 @@ module.exports = kconfig = async (kill, message) => {
 					await kill.reply(from, travah, id)
 				}
 			} catch (error) {
-				await kill.reply(from, convh + '\n\nCertifique-se de botar o valor da conversão.', id)
+				await kill.reply(from, travah + '\n\nCertifique-se de botar o valor da conversão.', id)
 			}
 			break			
 			
