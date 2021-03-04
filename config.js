@@ -3208,7 +3208,7 @@ module.exports = kconfig = async (kill, message) => {
 				} else if (args[0] == '-cavaleiro') {
 					await kill.reply(from, cavalairoc, id)
 				} else {
-					await kill.reply(from, convh, id)
+					await kill.reply(from, travah, id)
 				}
 			} catch (error) {
 				await kill.reply(from, convh + '\n\nCertifique-se de botar o valor da conversão.', id)
