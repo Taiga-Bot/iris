@@ -3655,7 +3655,7 @@ module.exports = kconfig = async (kill, message) => {
 
 			
 		case 'gaby':
-			await kill.reply(from, '*PEQUENO MANUAL PARA DEIXAR DE SER TROUXA*
+			await kill.reply(from, `*PEQUENO MANUAL PARA DEIXAR DE SER TROUXA*
 _Porque você precisa se livrar desse ciclo vicioso_
 
  
@@ -3687,7 +3687,7 @@ A cool girl não sabe sobre as coisas que gosta e não gosta, ela não tem auton
 
 E na minha terra a gente chama isso de: não ser trouxa
 
-_te amo gabyr_', id)
+_te amo gabyr_`, id)
 			break
 			
 			
