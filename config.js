@@ -1119,7 +1119,7 @@ module.exports = kconfig = async (kill, message) => {
 		case 'resposta':
 			if (args.length == 0) return kill.reply(from, 'Faltou a frase para ser adicionada.', id)
 			fs.appendFile('./lib/config/reply.txt', `\n${body.slice(10)}`)
-			await kill.reply(from, 'Frase adicionada a Íris.', id)
+			await kill.reply(from, 'Frase adicionada a Taiga.', id)
 			break
 
 
@@ -1705,7 +1705,7 @@ module.exports = kconfig = async (kill, message) => {
 				for (let ids of chatz) {
 					var cvk = await kill.getChatById(ids)
 					if (!cvk.isReadOnly) {
-						await kill.sendText(ids, `[Transmissão do dono da Íris]\n\n${msg}`)
+						await kill.sendText(ids, `[Transmissão do dono da Taiga]\n\n${msg}`)
 					} else {
 						console.log("Ignorei um grupo/privado pois estava fechado.")
 					}
@@ -1718,7 +1718,7 @@ module.exports = kconfig = async (kill, message) => {
 					if (!notgps) {
 						var bkgps = await kill.getChatById(bclst)
 						if (!bkgps.isReadOnly) {
-							await kill.sendText(bclst, `[Transmissão do dono da Íris]\n\n${msg}`)
+							await kill.sendText(bclst, `[Transmissão do dono da Taiga]\n\n${msg}`)
 						} else {
 							console.log("Ignorei um grupo/privado pois estava fechado.")
 						}
@@ -1828,7 +1828,7 @@ module.exports = kconfig = async (kill, message) => {
 		case 'sip':
 			if (args.length == 1) {
 				const ip = await axios.get(`http://ipwhois.app/json/${body.slice(5)}`)
-				await kill.sendLinkWithAutoPreview(from, `http://www.google.com/maps/place/${ip.data.latitude},${ip.data.longitude}`, `\n✪ IP: ${ip.data.ip}\n\n✪ Tipo: ${ip.data.type}\n\n✪ Região: ${ip.data.region}\n\n✪ Cidade: ${ip.data.city}\n\n✪ Latitude: ${ip.data.latitude}\n\n✪ Longitude: ${ip.data.longitude}\n\n✪ Provedor: ${ip.data.isp}\n\n✪ Continente: ${ip.data.continent}\n\n✪ Sigla do continente: ${ip.data.continent_code}\n\n✪ País: ${ip.data.country}\n\n✪ Sigla do País: ${ip.data.country_code}\n\n✪ Capital do País: ${ip.data.country_capital}\n\n✪ DDI: ${ip.data.country_phone}\n\n✪ Países Vizinhos: ${ip.data.country_neighbours}\n\n✪ Fuso Horário: ${ip.data.timezone} ${ip.data.timezone_name} ${ip.data.timezone_gmt}\n\n✪ Moeda: ${ip.data.currency}\n\n✪ Sigla da Moeda: ${ip.data.currency_code}\n\nBusca de IP realizada por Íris - KillovSky!`, id)
+				await kill.sendLinkWithAutoPreview(from, `http://www.google.com/maps/place/${ip.data.latitude},${ip.data.longitude}`, `\n✪ IP: ${ip.data.ip}\n\n✪ Tipo: ${ip.data.type}\n\n✪ Região: ${ip.data.region}\n\n✪ Cidade: ${ip.data.city}\n\n✪ Latitude: ${ip.data.latitude}\n\n✪ Longitude: ${ip.data.longitude}\n\n✪ Provedor: ${ip.data.isp}\n\n✪ Continente: ${ip.data.continent}\n\n✪ Sigla do continente: ${ip.data.continent_code}\n\n✪ País: ${ip.data.country}\n\n✪ Sigla do País: ${ip.data.country_code}\n\n✪ Capital do País: ${ip.data.country_capital}\n\n✪ DDI: ${ip.data.country_phone}\n\n✪ Países Vizinhos: ${ip.data.country_neighbours}\n\n✪ Fuso Horário: ${ip.data.timezone} ${ip.data.timezone_name} ${ip.data.timezone_gmt}\n\n✪ Moeda: ${ip.data.currency}\n\n✪ Sigla da Moeda: ${ip.data.currency_code}\n\nBusca de IP realizada por Taiga - @pedroh790!`, id)
             } else {
 				await kill.reply(from, 'Especifique um IP de tipo IPV4.', id)
             }
@@ -3130,15 +3130,15 @@ module.exports = kconfig = async (kill, message) => {
 			if (args[0] == '-help' || args[0] == '-h') return kill.reply(from, travah, id)
 			try {
 				if (args[0] == '-ciencias a') {
-					await kill.sendFile(from, 'lib/livros/Ciências/Ciências - Frente A - Cap.1 - Volume 1 - Ecologia.pdf', id)
+					await kill.sendFileFromUrl(from, 'https://github.com/Taiga-Bot/iris/raw/main/lib/livros/Ci%C3%AAncias/Ci%C3%AAncias%20%20-%20Frente%20A%20-%20Cap.1%20-%20Volume%201%20-%20Ecologia.pdf', id)
 				} else if (args[0] == '-ciencias b') {
-					await kill.sendFile(from, 'lib/livros/Ciências/Ciências - Frente B - Cap.1 - Volume 1 - Matéria, seus estados e transformações.pdf', id)
+					await kill.sendFileFromUrl(from, 'https://github.com/Taiga-Bot/iris/raw/main/lib/livros/Ci%C3%AAncias/Ci%C3%AAncias%20%20-%20Frente%20B%20-%20Cap.1%20-%20Volume%201%20-%20Mat%C3%A9ria%2C%20seus%20estados%20e%20transforma%C3%A7%C3%B5es.pdf', id)
 				} else if (args[0] == '-ciencias c') {
-					await kill.sendFile(from, 'lib/livros/Ciências/Ciências - Frente C - Cap.1 - Volume 1 - O movimento retilíneo uniforme e o movimento acelerado.pdf', id)
+					await kill.sendFileFromUrl(from, 'https://github.com/Taiga-Bot/iris/raw/main/lib/livros/Ci%C3%AAncias/Ci%C3%AAncias%20%20-%20Frente%20C%20-%20Cap.1%20-%20Volume%201%20-%20O%20movimento%20retil%C3%ADneo%20uniforme%20e%20o%20movimento%20acelerado.pdf', id)
 				} else if (args[0] == '-geografia') {
-					await kill.sendFile(from, 'lib/livros/Geografia/Geografia - Frente CAP - Cap.01 - Volume 1 - O espaço global. da consolidação do capitalismo à Globalização contemporânea.pdf', id)
+					await kill.sendFileFromUrl(from, 'https://github.com/Taiga-Bot/iris/raw/main/lib/livros/Geografia/Geografia%20%20-%20Frente%20CAP%20-%20Cap.01%20-%20Volume%201%20-%20O%20espa%C3%A7o%20global.%20da%20consolida%C3%A7%C3%A3o%20do%20capitalismo%20%C3%A0%20Globaliza%C3%A7%C3%A3o%20contempor%C3%A2nea.pdf', id)
 				} else if (args[0] == '-historia') {
-					await kill.sendFile(from, 'lib/livros/História/História - Frente A - Cap.1 - Volume 1 - A Primeira Guerra Mundial (1914-1918).pdf', id)
+					await kill.sendFileFromUrl(from, 'https://github.com/Taiga-Bot/iris/raw/main/lib/livros/Hist%C3%B3ria/Hist%C3%B3ria%20%20-%20Frente%20A%20-%20Cap.1%20-%20Volume%201%20-%20A%20Primeira%20Guerra%20Mundial%20(1914-1918).pdf', id)
 				} else {
 					await kill.reply(from, 'escreveu certo msm?', id)
 				}
@@ -3391,7 +3391,7 @@ module.exports = kconfig = async (kill, message) => {
 			
 			
 		case 'help':
-			if (args.length == 0) return kill.reply(from, 'Defina seu problema a ser enviado ao grupo responsável pela Íris.', id)
+			if (args.length == 0) return kill.reply(from, 'Defina seu problema a ser enviado ao grupo responsável pela Taiga.', id)
 			const hpgp = groupId.replace('@g.us', '')
 			const hppv = sender.id.replace('@c.us', '')
 			if (isGroupMsg) {
@@ -3700,7 +3700,7 @@ _te amo gabyr_`, id)
         }
     } catch (err) {
         console.log(color('[ERRO]', 'red'), err)
-		//kill.sendText(ownerNumber, `_Olá, caro dono(a)!_\n_Obtive erros ao executar o comando..._\n\n*${prefix}${body.slice(1)}*\n\n_Peço que corrija por gentileza para podermos usar sem preocupações._\n_Agradecida, Íris._\n\n_Qual erro?_\n\n*${err}*`)
+		//kill.sendText(ownerNumber, `_Olá, caro dono(a)!_\n_Obtive erros ao executar o comando..._\n\n*${prefix}${body.slice(1)}*\n\n_Peço que corrija por gentileza para podermos usar sem preocupações._\n_Agradecida, Taiga._\n\n_Qual erro?_\n\n*${err}*`)
 		kill.reply(from, `⚠️ _ops, por algum motivo obtive erros com esse comando, por favor evite usa-lo novamente e se possível contate os responsáveis com o comando ${prefix}help._`, id)
     }
 }
