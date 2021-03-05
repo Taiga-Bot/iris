@@ -3228,7 +3228,7 @@ module.exports = kconfig = async (kill, message) => {
 				} else if (args[0] == '-alakazam') {
 					await kill.reply(from, alakazamc, id)
 				} else if (args[0] == '-cavaleiro') {
-					await kill.reply(from, cavalairoc, id)
+					await kill.reply(from, cavaleiroc, id)
 				} else {
 					await kill.reply(from, travah, id)
 				}
